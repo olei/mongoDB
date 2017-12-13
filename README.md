@@ -1,9 +1,9 @@
-##MongoDB 配置
+## MongoDB 配置
 
-###安装
+### 安装
 `sudo brew install mongodb --devel`
 
-###进入 /usr/local/bin
+### 进入 /usr/local/bin
 执行以下命令
 ```
 sudo mongod --dbpath “/mongodb/data/db” --logpath “/mongodb/data/log\MongoDB.log” —auth
@@ -11,7 +11,7 @@ sudo mongod --dbpath “/mongodb/data/db” --logpath “/mongodb/data/log\Mongo
 >use admin
 >db.createUser({'user': 'root', 'pwd': '123456', 'roles': [{ role: "clusterAdmin", db: "admin" }, { role: "readAnyDatabase", db: "admin" }, “readWrite"]})
 ```
-###重启mongodb服务器
+### 重启mongodb服务器
 另外开一个终端进入/usr/local/bin
 ```
 $ mongo
