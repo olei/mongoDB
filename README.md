@@ -41,15 +41,18 @@ $ mongo
     *PS：关于每个角色所拥有的操作权限可以点击上面的内置角色链接查看详情。*
     
   
-**例如：在products数据库创建用户accountAdmin01，并给该用户admin数据库上clusterAdmin和readAnyDatabase的角色，products数据库上readWrite角色。**
+**例如：在products数据库创建用户root，并给该用户admin数据库上clusterAdmin和readAnyDatabase的角色，products数据库上readWrite角色。**
 ```
 > use products
-> db.createUser( { "user" : "accountAdmin01",
-                 "pwd": "cleartext password",
-                 "customData" : { employeeId: 12345 },
-                 "roles" : [ { role: "clusterAdmin", db: "admin" },
-                             { role: "readAnyDatabase", db: "admin" },
-                             "readWrite"
-                             ] },
-               { w: "majority" , wtimeout: 5000 } )
+> db.createUser({ 
+    "user": "root",
+    "pwd": "123456",
+    "customData": { employeeId: 12345 },
+    "roles" : [
+        {role: "clusterAdmin", db: "admin"},
+        {role: "readAnyDatabase", db: "admin" },
+        "readWrite"
+    ]
+  },
+  {w: "majority" , wtimeout: 5000})
 ```
