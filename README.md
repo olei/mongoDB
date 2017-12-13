@@ -35,6 +35,7 @@ $ mongo
     6. 超级用户角色：root  
     
     *这里还有几个角色间接或直接提供了系统超级用户的访问（dbOwner 、userAdmin、userAdminAnyDatabase）*
+    
     7. 内部角色：__system
     
     *PS：关于每个角色所拥有的操作权限可以点击上面的内置角色链接查看详情。*
