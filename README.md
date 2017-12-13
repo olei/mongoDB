@@ -6,7 +6,7 @@
 ### 进入 /usr/local/bin
 执行以下命令
 ```
-sudo mongod --dbpath “/mongodb/data/db” --logpath “/mongodb/data/log\MongoDB.log” —auth
+$ sudo mongod --dbpath “/mongodb/data/db” --logpath “/mongodb/data/log\MongoDB.log” —auth
 
 >use admin
 >db.createUser({'user': 'root', 'pwd': '123456', 'roles': [{ role: "clusterAdmin", db: "admin" }, { role: "readAnyDatabase", db: "admin" }, “readWrite"]})
