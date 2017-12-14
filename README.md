@@ -64,7 +64,7 @@ $ mongo
 * -d： 需要备份的数据库实例，例如：test
 * -o： 备份的数据存放位置，例如：/home/mongodump/，当然该目录需要提前建立，这个目录里面存放该数据库实例的备份数据。
 ```
-sudo mongodump -h 192.168.17.129:27017 -d itcast -o /home/mongodump/
+sudo mongodump -u root -p 123456 -h 127.0.0.1:27017 -d admin -o /mongobase/
 ```
 
 ## 导入导出库
