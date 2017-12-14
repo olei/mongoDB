@@ -79,6 +79,22 @@ mongoexport -d dbname -c collectionname -o file --type json/csv -f field
 $ sudo mongoexport -u 'root' -p '123456' -d admin -c col -o '/baseBK/bk.json' --type json -f  "_id,user_id,user_name,age,status"
 ```
 
+### 导入
+```
+mongoimport -d dbname -c collectionname --file filename --headerline --type json/csv -f field
+```
+* 参数说明：
+* -d ：数据库名
+* -c ：collection名
+* --type ：导入的格式默认json
+* -f ：导入的字段名
+* --headerline ：如果导入的格式是csv，则可以使用第一行的标题作为导入的字段
+* --file ：要导入的文件
+```
+$ sudo mongoimport -u 'root' -p '123456' -d admin -c col --file /baseBK/col.json --type json
+```
+
+
 ## 设置主从数据库
 
 ### 创建Sharding复制集 rs0
