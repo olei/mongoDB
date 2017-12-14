@@ -62,17 +62,17 @@ $ mongo
 ### 导出
 `mongoexport -d dbname -c collectionname -o file --type json/csv -f field`
 
-    - 参数说明：
+    * 参数说明：
     
-     - -d ：数据库名
+     * -d ：数据库名
      
-     - -c ：collection名
+     * -c ：collection名
      
-     - -o ：输出的文件名
+     * -o ：输出的文件名
      
-     - --type ： 输出的格式，默认为json
+     * --type ： 输出的格式，默认为json
      
-     - -f ：输出的字段，如果-type为csv，则需要加上-f "字段名"
+     * -f ：输出的字段，如果-type为csv，则需要加上-f "字段名"
      
 ```
 $ sudo mongoexport -u 'root' -p '123456' -d admin -c col -o '/baseBK/bk.json' --type json
