@@ -105,7 +105,9 @@ $ mongo localhost:27100
 ```
 
 ### 4. 创建Route
-`$ nohup mongos --port 40000 --configdb conf/localhost:27100,localhost:27101 --fork --logpath=/data/log/route.log --logappend & `
+```
+$ nohup mongos --port 40000 --configdb conf/localhost:27100,localhost:27101 --fork --logpath=/data/log/route.log --logappend & 
+```
 
 ### 4.1 设置分片
 ```
