@@ -6,12 +6,12 @@
 ### 进入 /usr/local/bin
 执行以下命令
 ```
-$ sudo mongod --dbpath '/mongodb/data/db' --logpath '/mongodb/data/log/MongoDB.log' -auth
+$ sudo mongod --dbpath "/mongodb/data/db" --logpath "/mongodb/data/logs/MongoDB.log" --auth
 
 >use admin
 >db.createUser({'user': 'root', 'pwd': '123456', 'roles': [{ role: "clusterAdmin", db: "admin" }, { role: "readAnyDatabase", db: "admin" }, “readWrite"]})
 ```
-- 这里的'/mongodb/data/log/MongoDB.log'如果使用双引号会报错`[main] Failed global initialization: FileNotOpen: Failed to open "/usr/local/bin/“/mongodb/data/log/MongoDB.log”"`
+- 这里的'/mongodb/data/log/MongoDB.log'如果使用双引号有些时候会莫名报错`[main] Failed global initialization: FileNotOpen: Failed to open "/usr/local/bin/“/mongodb/data/log/MongoDB.log”"`
 ### 重启mongodb服务器
 另外开一个终端进入/usr/local/bin
 ```
