@@ -10,6 +10,7 @@ $ sudo mongod --dbpath "/mongodb/data/db" --logpath "/mongodb/data/logs/MongoDB.
 
 >use admin
 >db.createUser({'user': 'root', 'pwd': '123456', 'roles': [{ role: "clusterAdmin", db: "admin" }, { role: "readAnyDatabase", db: "admin" }, “readWrite"]})
+>db.changeUserPassword('root','test'); //密码修改
 ```
 - 这里的'/mongodb/data/log/MongoDB.log'如果使用双引号有些时候会莫名报错`[main] Failed global initialization: FileNotOpen: Failed to open "/usr/local/bin/“/mongodb/data/log/MongoDB.log”"`
 ### 重启mongodb服务器
